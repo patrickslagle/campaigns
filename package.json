@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patrickslagle/react-boilerplate"
+    "url": "git+https://github.com/patrickslagle/campaigns"
   },
   "author": "Patrick Slagle",
   "license": "MIT",
