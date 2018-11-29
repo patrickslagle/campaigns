@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CampaignPhoto from './campaign-photo.jsx';
 
 export default class App extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ export default class App extends Component {
       userCity: '',
       userIndustry: '',
       userCompanySize: '',
+      priority: ['Austin', 'SanFrancisco', 'Software', 'Sports', '0-50', '100-200'],
     };
     this.fetchUserData = this.fetchUserData.bind(this);
   }
@@ -34,10 +36,16 @@ export default class App extends Component {
 
 
   render() {
+    const { userCity, userCompanySize, userIndustry, priority } = this.state;
     return (
       <div>
-        <div>{this.state.userCity} - {this.state.userIndustry} - {this.state.userCompanySize}</div>
+        <CampaignPhoto
+          userCity={userCity}
+          userCompanySize={userCompanySize}
+          userIndustry={userIndustry}
+          priority={priority}
+        />
       </div>
-    )
+    );
   }
 }
