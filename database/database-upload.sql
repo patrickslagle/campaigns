@@ -1,5 +1,5 @@
 -- create a temporary table to get all the data from the .csv file
-\COPY "Temp" ("Id", "IpAddress", "City", "Industry", "Size") FROM '/home2/Coding/jobhunt/assessments/campaigns/assets/Proof_homework.csv' DELIMITER ',' CSV HEADER;
+\COPY "Temp" ("Id", "IpAddress", "City", "Industry", "Size") FROM 'CSV_Location' DELIMITER ',' CSV HEADER;
 
 -- insert data into segmented more specific tables
 INSERT INTO "UserIpAddress" ("IpAddress") SELECT "IpAddress" FROM "Temp";
