@@ -1,37 +1,45 @@
-postgres://nyuzgibb:dgptSbjP7otVsSfbIdD-g3bp06z0VJIo@baasu.db.elephantsql.com:5432/nyuzgibb
-
-CREATE TABLE "User" (
-  "id"  serial  UNIQUE,
+-- temporary table just to get contents of the .csv file
+CREATE TABLE "Temp" (
+  "Id"  serial  UNIQUE,
   "IpAddress"  varchar,
-  CONSTRAINT User_pk PRIMARY KEY ("id")
+  "City"  varchar,
+  "Industry"  varchar,
+  "Size"  varchar,
+  CONSTRAINT Temp_pk PRIMARY KEY ("Id")
 ) WITH (
   OIDS=FALSE
 );
 
-CREATE TABLE "UserGeo" (
-  "City"  varchar,
-  "UserId"  integer
+CREATE TABLE "UserIpAddress" (
+  "Id"  serial  UNIQUE,
+  "IpAddress"  varchar,
+  CONSTRAINT User_pk PRIMARY KEY ("Id")
+) WITH (
+  OIDS=FALSE
+);
+
+CREATE TABLE "UserLocation" (
+  "UserId"  integer,
+  "City"  varchar
 ) WITH (
   OIDS=FALSE
 );
 
 CREATE TABLE "UserIndustry" (
-  "Industry"  varchar,
-  "UserId"  integer
+  "UserId"  integer,
+  "Industry"  varchar
 ) WITH (
   OIDS=FALSE
 );
 
-CREATE TABLE "UserCompanySize" (
-  "Size"  varchar,
-  "UserId"  integer
+CREATE TABLE "UserCompanyInfo" (
+  "UserId"  integer,
+  "Size"  varchar
 ) WITH (
   OIDS=FALSE
 );
 
-
-ALTER TABLE "UserGeo" ADD CONSTRAINT "UserGeo_fk0" FOREIGN KEY ("UserId") REFERENCES "User"("id");
-
-ALTER TABLE "UserIndustry" ADD CONSTRAINT "UserIndustry_fk0" FOREIGN KEY ("UserId") REFERENCES "User"("id");
-
-ALTER TABLE "UserCompanySize" ADD CONSTRAINT "UserCompanySize_fk0" FOREIGN KEY ("UserId") REFERENCES "User"("id");
+-- foreign keys for "UserLocation", "UserIndustry", and "UserCompanyInfo"
+ALTER TABLE "UserLocation" ADD CONSTRAINT "UserLocation_fk0" FOREIGN KEY ("UserId") REFERENCES "UserIpAddress"("Id");
+ALTER TABLE "UserIndustry" ADD CONSTRAINT "UserIndustry_fk0" FOREIGN KEY ("UserId") REFERENCES "UserIpAddress"("Id");
+ALTER TABLE "UserCompanyInfo" ADD CONSTRAINT "UserCompanyInfo_fk0" FOREIGN KEY ("UserId") REFERENCES "UserIpAddress"("Id");
