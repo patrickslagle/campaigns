@@ -8,7 +8,7 @@ export default class App extends Component {
       userCity: '',
       userIndustry: '',
       userCompanySize: '',
-      priority: ['Austin', 'SanFrancisco', 'Software', 'Sports', '0-50', '100-200'],
+      priority: ['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200'],
     };
     this.fetchUserData = this.fetchUserData.bind(this);
   }
