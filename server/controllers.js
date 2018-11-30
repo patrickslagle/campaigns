@@ -18,14 +18,15 @@ function findIpAddress(req, res, next) {
 
 function findUserData(req, res, next) {
   // change to res.locals once done developing
-  const { ipAddress } = '43.217.98.114';
+  const { ipAddress } = res.locals;
+  console.log(ipAddress);
   const sql = `
   SELECT "UserLocation"."City", "UserIndustry"."Industry", "UserCompanyInfo"."Size"
   FROM "UserIpAddress" 
   FULL OUTER JOIN "UserLocation" ON "UserLocation"."UserId" = "UserIpAddress"."Id"
   FULL OUTER JOIN "UserIndustry" ON "UserIndustry"."UserId" = "UserIpAddress"."Id"
   FULL OUTER JOIN "UserCompanyInfo" ON "UserCompanyInfo"."UserId" = "UserIpAddress"."Id"
-  where "IpAddress" = '43.217.98.114';`;
+  where "IpAddress" = '${ipAddress}';`;
   pool.query(sql)
     .then((userData) => {
       if (!userData.rows.length) next(new Error('IP Address is not in database yet'));
