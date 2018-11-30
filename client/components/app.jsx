@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CampaignPhoto from './campaign-photo.jsx';
+import CampaignPriority from './campaign-priority.jsx';
 
 export default class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ export default class App extends Component {
           userIndustry={userIndustry}
           priority={priority}
         />
+        <CampaignPriority priority={priority} />
       </div>
     );
   }
