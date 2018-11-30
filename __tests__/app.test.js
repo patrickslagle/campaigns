@@ -34,3 +34,26 @@ test('CampaignPhoto component renders properly with user data', () => {
   );
   expect(wrapper).toMatchSnapshot();
 });
+
+test('Test that Austin image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="Austin"
+      userCompanySize="0-50"
+      userIndustry="100-200"
+      priority={['Austin', 'SanFrancisco', 'Software', 'Sports', '0-50', '100-200']}
+    />);
+  expect(wrapper.find("img").prop('src')).toBe('./assets/Austin.jpg')
+});
+
+test('Test that San Fransisco image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="San Francisco"
+      userCompanySize="0-50"
+      userIndustry="100-200"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />);
+  expect(wrapper.find("img").prop('src')).toBe('./assets/SanFrancisco.jpg')
+});
+

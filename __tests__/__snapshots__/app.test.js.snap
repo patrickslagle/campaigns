@@ -8,7 +8,7 @@ exports[`App component renders properly 1`] = `
     priority={
       Array [
         "Austin",
-        "SanFrancisco",
+        "San Francisco",
         "Software",
         "Sports",
         "0-50",
