@@ -47,8 +47,8 @@ const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) =>
 CampaignPhoto.propTypes = {
   userCity: PropTypes.string,
   userCompanySize: PropTypes.string,
-  userIndustry: PropTypes.func,
-  priority: PropTypes.bool.isRequired,
+  userIndustry: PropTypes.string,
+  priority: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 CampaignPhoto.defaultProps = {
   userCity: '',
