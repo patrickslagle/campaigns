@@ -1,0 +1,52 @@
+* {
+  background-color: snow;
+  margin: 0px;
+  padding: 0px; 
+}
+
+#app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#campaign {
+  height: 50vh;
+  margin: 20px; 
+}
+
+#priority-container {
+  height: 500px;
+  width: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.priority {
+  display: flex;
+  font-size: 20px; 
+  align-items: center;
+  padding: 5px; 
+}
+
+#arrow-up {
+  background-image: url('./assets/ArrowUp.svg');
+  background-repeat: no-repeat; 
+  background-size: 100% 100%; 
+  border: none; 
+  width: 20px; 
+  height: 20px; 
+}
+
+#arrow-down {
+  background-image: url('./assets/ArrowDown.svg');
+  background-repeat: no-repeat; 
+  background-size: 100% 100%; 
+  border: none; 
+  width: 20px; 
+  height: 20px; 
+}
+
