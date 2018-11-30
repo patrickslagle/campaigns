@@ -3,6 +3,9 @@ import React from 'react';
 const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) => {
   // finds and renders photo for matching campaign
   function renderPhoto() {
+    // if user data is still being fetched, render loading gif.
+    if (!userCity.length) return <img src="./assets/loading.gif" alt="campaign" />;
+
     let imgName = '';
     let counter = 0;
     // iterate through the priority until a match is found or iterated through whole priority list
@@ -29,11 +32,11 @@ const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) =>
         counter += 1;
       }
     }
-    return <img src={`./assets/${imgName}.jpg`} alt="campaign" />;
+    return <img id="campaign" src={`./assets/${imgName}.jpg`} alt="campaign" />;
   }
 
   return (
-    <div>
+    <div id="campaign-container">
       {renderPhoto()}
     </div>
   );
