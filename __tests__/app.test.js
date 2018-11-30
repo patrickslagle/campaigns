@@ -40,10 +40,11 @@ test('Test that Austin image is rendered correctly', () => {
     <CampaignPhoto
       userCity="Austin"
       userCompanySize="0-50"
-      userIndustry="100-200"
+      userIndustry="Software"
       priority={['Austin', 'SanFrancisco', 'Software', 'Sports', '0-50', '100-200']}
-    />);
-  expect(wrapper.find("img").prop('src')).toBe('./assets/Austin.jpg')
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Austin.jpg')
 });
 
 test('Test that San Fransisco image is rendered correctly', () => {
@@ -51,9 +52,69 @@ test('Test that San Fransisco image is rendered correctly', () => {
     <CampaignPhoto
       userCity="San Francisco"
       userCompanySize="0-50"
-      userIndustry="100-200"
+      userIndustry="Software"
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
-    />);
-  expect(wrapper.find("img").prop('src')).toBe('./assets/SanFrancisco.jpg')
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/SanFrancisco.jpg')
 });
 
+test('Test that Software image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="New York"
+      userCompanySize="0-50"
+      userIndustry="Software"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Software.jpg')
+});
+
+test('Test that Sports image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="New York"
+      userCompanySize="0-50"
+      userIndustry="Sports"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Sports.jpg')
+});
+
+test('Test that Proof image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="New York"
+      userCompanySize="0-50"
+      userIndustry="Tourism"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/proof.jpg')
+});
+
+test('Test that smb image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="New York"
+      userCompanySize="100-200"
+      userIndustry="Tourism"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/smb.jpg')
+});
+
+test('Test that shrug image is rendered correctly', () => {
+  const wrapper = shallow(
+    <CampaignPhoto
+      userCity="New York"
+      userCompanySize="1000+"
+      userIndustry="Tourism"
+      priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
+    />,
+  );
+  expect(wrapper.find('img').prop('src')).toBe('./assets/shrug.jpg');
+});
