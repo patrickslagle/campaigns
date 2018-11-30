@@ -1,7 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders properly 1`] = `
-<div>
-  Hello World
+<div
+  id="app"
+>
+  <CampaignPhoto
+    priority={
+      Array [
+        "Austin",
+        "SanFrancisco",
+        "Software",
+        "Sports",
+        "0-50",
+        "100-200",
+      ]
+    }
+    userCity=""
+    userCompanySize=""
+    userIndustry=""
+  />
+</div>
+`;
+
+exports[`CampaignPhoto component renders properly with user data 1`] = `
+<div
+  id="campaign-container"
+>
+  <img
+    alt="campaign"
+    id="campaign"
+    src="./assets/Austin.jpg"
+  />
+</div>
+`;
+
+exports[`CampaignPhoto component renders properly without user data 1`] = `
+<div
+  id="campaign-container"
+>
+  <img
+    alt="campaign"
+    src="./assets/loading.gif"
+  />
 </div>
 `;
