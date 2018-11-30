@@ -14,6 +14,7 @@ const CampaignPriority = ({ priority }) => {
 
   return (
     <div id="priority-container">
+      <h2>Campaign Priorities</h2>
       {renderPriorities()}
     </div>
   );
