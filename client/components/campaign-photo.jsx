@@ -17,8 +17,7 @@ const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) =>
       else {
         switch (priority[counter]) {
           case userCity:
-            if (userCity === 'San Francisco') imgName = 'SanFrancisco';
-            else imgName = userCity;
+            imgName = userCity;
             break;
           case userCompanySize:
             if (userCompanySize === '0-50') imgName = 'proof';

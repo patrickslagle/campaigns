@@ -8,7 +8,7 @@ exports[`App component renders properly 1`] = `
     priority={
       Array [
         "Austin",
-        "San Francisco",
+        "SanFrancisco",
         "Software",
         "Sports",
         "0-50",
@@ -18,6 +18,19 @@ exports[`App component renders properly 1`] = `
     userCity=""
     userCompanySize=""
     userIndustry=""
+  />
+  <CampaignPriority
+    changePriority={[Function]}
+    priority={
+      Array [
+        "Austin",
+        "SanFrancisco",
+        "Software",
+        "Sports",
+        "0-50",
+        "100-200",
+      ]
+    }
   />
 </div>
 `;
