@@ -44,7 +44,7 @@ test('Test that Austin image is rendered correctly', () => {
       priority={['Austin', 'SanFrancisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/Austin.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Austin.jpg');
 });
 
 test('Test that San Fransisco image is rendered correctly', () => {
@@ -56,7 +56,7 @@ test('Test that San Fransisco image is rendered correctly', () => {
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/SanFrancisco.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/SanFrancisco.jpg');
 });
 
 test('Test that Software image is rendered correctly', () => {
@@ -68,7 +68,7 @@ test('Test that Software image is rendered correctly', () => {
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/Software.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Software.jpg');
 });
 
 test('Test that Sports image is rendered correctly', () => {
@@ -80,7 +80,7 @@ test('Test that Sports image is rendered correctly', () => {
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/Sports.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/Sports.jpg');
 });
 
 test('Test that Proof image is rendered correctly', () => {
@@ -92,7 +92,7 @@ test('Test that Proof image is rendered correctly', () => {
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/proof.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/proof.jpg');
 });
 
 test('Test that smb image is rendered correctly', () => {
@@ -104,7 +104,7 @@ test('Test that smb image is rendered correctly', () => {
       priority={['Austin', 'San Francisco', 'Software', 'Sports', '0-50', '100-200']}
     />,
   );
-  expect(wrapper.find('img').prop('src')).toBe('./assets/smb.jpg')
+  expect(wrapper.find('img').prop('src')).toBe('./assets/smb.jpg');
 });
 
 test('Test that shrug image is rendered correctly', () => {
