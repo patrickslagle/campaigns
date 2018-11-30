@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) => {
   // finds and renders photo for matching campaign
@@ -41,6 +42,18 @@ const CampaignPhoto = ({ userCity, userCompanySize, userIndustry, priority }) =>
       {renderPhoto()}
     </div>
   );
+};
+
+CampaignPhoto.propTypes = {
+  userCity: PropTypes.string,
+  userCompanySize: PropTypes.string,
+  userIndustry: PropTypes.func,
+  priority: PropTypes.bool.isRequired,
+};
+CampaignPhoto.defaultProps = {
+  userCity: '',
+  userCompanySize: '',
+  userIndustry: '',
 };
 
 export default CampaignPhoto;
