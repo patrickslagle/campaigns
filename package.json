@@ -49,6 +49,9 @@
   },
   "jest": {
     "automock": false,
+    "setupFiles": [
+      "./setup-jest.js"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
