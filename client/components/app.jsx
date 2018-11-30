@@ -31,14 +31,14 @@ export default class App extends Component {
           userCompanySize: Size,
         });
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error('Unable to fetch user data'));
   }
 
 
   render() {
     const { userCity, userCompanySize, userIndustry, priority } = this.state;
     return (
-      <div>
+      <div id="app">
         <CampaignPhoto
           userCity={userCity}
           userCompanySize={userCompanySize}
